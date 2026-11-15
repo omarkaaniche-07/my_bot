@@ -32,6 +32,12 @@
             </geometry>
             <material name="white"/>
         </visual>
+        <collision>
+            <origin xyz="0.15 0 0.075"/>
+            <geometry>
+                <box size="0.3 0.3 0.15"/>
+            </geometry>
+        </collision>
     </link>
 
     <!-- RIGHT WHEEL -->
@@ -49,6 +55,11 @@
             </geometry>
             <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
     </link>
 
     <!-- LEFT WHEEL -->
@@ -66,14 +77,18 @@
             </geometry>
             <material name="blue"/>
         </visual>
+        <collision>
+            <geometry>
+                <cylinder radius="0.05" length="0.04"/>
+            </geometry>
+        </collision>
     </link>
-
 
     <!-- CASTER WHEEL -->
     <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
         <child link="caster_wheel"/>
-        <origin xyz = "0.24 0 0"/>
+        <origin xyz="0.24 0 0"/>
     </joint>
 
     <link name="caster_wheel">
@@ -83,8 +98,11 @@
             </geometry>
             <material name="black"/>
         </visual>
+        <collision>
+            <geometry>
+                <sphere radius="0.05"/>
+            </geometry>
+        </collision>
     </link>
-
-
 
 </robot>
