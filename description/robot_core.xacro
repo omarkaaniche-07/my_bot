@@ -69,17 +69,17 @@
     </link>
 
 
-    #caster_wheel 
-    <joint nmae="caster_wheel_joint" type="fixed/">
+    <!-- CASTER WHEEL -->
+    <joint name="caster_wheel_joint" type="fixed">
         <parent link="chassis"/>
         <child link="caster_wheel"/>
-        <origin xyz = "024 0 0"/>
+        <origin xyz = "0.24 0 0"/>
     </joint>
 
     <link name="caster_wheel">
         <visual>
             <geometry>
-                <shpere radius="0.05"/>
+                <sphere radius="0.05"/>
             </geometry>
             <material name="black"/>
         </visual>
